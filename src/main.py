@@ -1,7 +1,9 @@
 import sys
 from command_line_main import main as cmd_main
 from flask_main import main as flsk_main
-
+"""
+Entry point. Application can run in two modes - interactive command line mode and web mode using Flask framework."
+"""
 if __name__ == "__main__":
     if len(sys.argv) < 2 or len(sys.argv) > 4:
         print(f"USAGE: {sys.argv[0]} <mode> <...>")

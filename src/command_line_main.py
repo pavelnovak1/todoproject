@@ -12,6 +12,11 @@ def print_menu():
     print("6 - End")
 
 def add_item(tdlist: storage.ToDoList):
+    """
+    Add item to the list
+    :param tdlist: To Do list
+    :return: True if new item was successfully added, False otherwise
+    """
     title = input("Title: ")
     if tdlist.has_item(title):
         print("This item is already in to do list.")
@@ -26,6 +31,11 @@ def add_item(tdlist: storage.ToDoList):
 
 
 def find_item_name(tdlist: storage.ToDoList):
+    """
+    Find item in To Do list by its name and print out all information
+    :param tdlist: To Do list
+    :return: True if item was found, False otherwise
+    """
     title = input("Title: ")
     item = tdlist.get_item_by_title(title)
     if item:
@@ -39,6 +49,11 @@ def find_item_name(tdlist: storage.ToDoList):
 
 
 def find_nearest_deadline(tdlist: storage.ToDoList):
+    """
+    Find work with the nearest deadline and prints out information
+    :param tdlist: To Do list
+    :return: True if such item exists, False otherwise
+    """
     all_items = tdlist.get_all()
     if len(all_items) == 0:
         print("No item in To Do list.")
@@ -55,6 +70,11 @@ def find_nearest_deadline(tdlist: storage.ToDoList):
 
 
 def delete_item(tdlist: storage.ToDoList):
+    """
+    Remove item from To Do list
+    :param tdlist: To Do list
+    :return: True, if item with given name exists, False otherwise.
+    """
     all_items = tdlist.get_all()
     if len(all_items) == 0:
         print("To Do list is empty.")
