@@ -6,6 +6,7 @@ This project is only partialy done and some functionality is not implemented yet
 
 # Prerequisites:
 python > 3.7
+
 Flask framework
 
 # How to use:
