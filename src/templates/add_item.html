@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add new item</title>
+</head>
+<body>
+<h1>Add</h1>
+{% if warn %} {{warnmessage}} {% endif %}
+<form method="post">
+    Title:<br>
+    <input type="text" name="title"><br>
+    Deadline:<br>
+    <input type="date" name="deadline"><br>
+    Importance:<br>
+    <input type="number" name="importnace">
+    <input type="submit" value="Submit">
+</form>
+</body>
+</html>
