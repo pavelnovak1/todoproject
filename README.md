@@ -10,7 +10,7 @@ python > 3.7
 Flask framework
 
 # How to use:
-```python main.py -w``` for web mode. To do list is by default available on localhost, port 5000.
+```python main.py -w``` for web mode. To do list is available, by default, on localhost - port 5000.
 
 ```python main.py -c <username> <password>``` for interactive mode.
 
