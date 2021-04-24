@@ -25,7 +25,7 @@ class ToDoItem:
         return hash(self.__title)
 
     def is_after_deadline(self):
-        return self.__deadline < datetime.date()
+        return self.__deadline > datetime.datetime.today()
 
     def is_important(self):
         return self.__importance >= 4
@@ -50,7 +50,7 @@ class ToDoList:
         self.__master_password = sha224(master_pwd.encode("utf-8")).hexdigest()
 
     def add_item(self, title, deadline: datetime.datetime, importance):
-        if deadline < datetime.datetime.now():
+        if deadline < datetime.datetime.today():
             raise RuntimeError("Item's deadline already expired")
 
         item = ToDoItem(title, deadline, importance)

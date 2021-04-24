@@ -8,7 +8,7 @@ if __name__ == "__main__":
     if len(sys.argv) < 2 or len(sys.argv) > 4:
         print(f"USAGE: {sys.argv[0]} <mode> <...>")
         print("Modes: \n"
-              "-c Command line mode\n"
+              "-c Command line mode < name > < password >\n"
               "-w WWW mode\n")
         sys.exit()
     if sys.argv[1] == "-c":

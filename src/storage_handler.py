@@ -1,6 +1,8 @@
 import to_do_storage as storage
 import pickle
+
 DATAFILE = "./data/"
+
 
 def load(name):
     """
@@ -20,6 +22,7 @@ def load(name):
         print("Error while loading data")
     return to_do_list
 
+
 def save(tdlist: storage.ToDoList, name):
     """
     Save to do list into the file.
@@ -29,4 +32,3 @@ def save(tdlist: storage.ToDoList, name):
     """
     with open(DATAFILE + f"{name}.data", "wb") as file:
         pickle.dump(tdlist, file)
-

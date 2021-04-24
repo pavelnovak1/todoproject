@@ -1,4 +1,6 @@
-import sys, datetime
+import datetime
+import sys
+
 import to_do_storage as storage
 from storage_handler import load, save
 
@@ -10,6 +12,7 @@ def print_menu():
     print("4 - Edit item")
     print("5 - Delete item")
     print("6 - End")
+
 
 def add_item(tdlist: storage.ToDoList):
     """
@@ -23,7 +26,7 @@ def add_item(tdlist: storage.ToDoList):
         return False
     deadline_year = int(input("Deadline year: "))
     deadline_month = int(input("Deadline month (1 - 12): "))
-    deadline_day  = int(input("Deadline day: "))
+    deadline_day = int(input("Deadline day: "))
     deadline = datetime.datetime(deadline_year, deadline_month, deadline_day)
     importance = int(input("Importance (1 - Low, 5 - High"))
     tdlist.add_item(title, deadline, importance)
@@ -59,13 +62,13 @@ def find_nearest_deadline(tdlist: storage.ToDoList):
         print("No item in To Do list.")
         return False
     else:
-        min = all_items[0]
+        minimal = all_items[0]
         for item in all_items:
-            if item.get_deadline() < min.get_deadline():
-                min = item
-        print(f"Title: {min.get_title()}")
-        print(f"Deadline: {min.get_deadline()}")
-        print(f"Importance: {min.get_importance()}")
+            if item.get_deadline() < minimal.get_deadline():
+                minimal = item
+        print(f"Title: {minimal.get_title()}")
+        print(f"Deadline: {minimal.get_deadline()}")
+        print(f"Importance: {minimal.get_importance()}")
         return True
 
 
@@ -90,7 +93,8 @@ def delete_item(tdlist: storage.ToDoList):
 
 def main():
     master_pwd = sys.argv[3]
-    to_do_list = load(sys.argv[2])
+    name = sys.argv[2]
+    to_do_list = load(name)
     if not to_do_list:
         to_do_list = storage.ToDoList(master_pwd)
 
@@ -112,7 +116,7 @@ def main():
         elif choice == 5:
             delete_item(to_do_list)
         elif choice == 6:
-            save(to_do_list)
+            save(to_do_list, name)
             exit()
         else:
             print(f"Unknown choice {choice}. Try again.")
