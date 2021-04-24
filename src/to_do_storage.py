@@ -7,9 +7,6 @@ class ToDoItem:
     Storage of one single work. Include name, deadline, and importance.
     Two items are the same if they have simmilar name. (This will be probably changed in the future)
     """
-    __title: str
-    __deadline: datetime.date
-    __importance: int
 
     def __init__(self, title, deadline, importance):
         self.__title = title
