@@ -8,7 +8,7 @@
 <body>
 <div class="container" style="width:500px;border-top-style: solid;border-top-width: 0px; margin-top: 50px;">
     <div class="jumbotron">
-        <H1>To Do List</H1>
+        <H1>To Do List - Registration</H1>
         <form method="post" class="form-horizontal">
              <div class="form-group">
               <label class="col-sm-2 control-label">Username</label>
@@ -22,7 +22,13 @@
                 <input class="form-control" type="password" name="passwd" required>
               </div>
             </div>
-            <input type="submit" value="Log In" class="btn btn-outline-primary btn-block center-block" style="width:400px;margin-top: 10px"><br>
+            <div class="form-group">
+              <label class="col-sm-2 control-label">Password again</label>
+              <div class="col-sm-10">
+                <input class="form-control" type="password" name="passwd_verify" required>
+              </div>
+            </div>
+            <input type="submit" value="Register" class="btn btn-outline-primary btn-block center-block" style="width:400px;margin-top: 10px"><br>
             {% if wrong %} Wrong password {% endif %}
         </form>
     </div>
