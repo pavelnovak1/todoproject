@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>All items</title>
+</head>
+<body>
+{% for title, deadline, importance in tasks %}
+    Title: {{title}}<br>
+    Deadline: {{deadline}}<br>
+    Importnace: {{importance}}<br><br>
+{% endfor %}
+
+<a href="/menu/">Back to main menu</a>
+
+</body>
+</html>

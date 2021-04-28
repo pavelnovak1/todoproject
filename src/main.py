@@ -1,5 +1,4 @@
 import sys
-from cli.main import main as cli_main
 from flsk.main import main as flask_main
 import argparse
 """
@@ -13,7 +12,7 @@ if __name__ == "__main__":
     if args.s:
         flask_main()
     elif args.c:
-        cli_main()
+        pass
     else:
         print(f"Unknown option {sys.argv[1]}")
 

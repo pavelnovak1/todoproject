@@ -9,11 +9,11 @@
 {% if warn %} {{warnmessage}} {% endif %}
 <form method="post">
     Title:<br>
-    <input type="text" name="title"><br>
+    <input type="text" name="title" required><br>
     Deadline:<br>
-    <input type="date" name="deadline"><br>
+    <input type="date" name="deadline" required><br>
     Importance:<br>
-    <input type="number" name="importnace">
+    <input type="number" name="importance" min="1" max="5" required>
     <input type="submit" value="Submit">
 </form>
 </body>
