@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap-5.0.0-beta3-dist/css/bootstrap.min.css')}}">
 </head>
 <body>
-<div class="container" style="width:500px;">
+<div class="container" style="width:500px;border-top-style: solid;border-top-width: 0px; margin-top: 50px;">
     <div class="jumbotron">
         <H1>To Do List</H1>
         <form method="post" class="form-horizontal">
@@ -22,7 +22,7 @@
                 <input class="form-control" type="password" name="passwd" required>
               </div>
             </div>
-            <input type="submit" value="Log In" class="btn btn-outline-primary btn-block center-block" style="width:400px"><br>
+            <input type="submit" value="Log In" class="btn btn-outline-primary btn-block center-block" style="width:400px;margin-top: 10px"><br>
             {% if wrong %} Wrong password {% endif %}
         </form>
     </div>
