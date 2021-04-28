@@ -1,6 +1,6 @@
 import sys
 from cli.main import main as cli_main
-from todo_flask.main import main as flask_main
+from flsk.main import main as flask_main
 import argparse
 """
 Entry point. Application can run in two modes - interactive command line mode and web mode using Flask framework."
