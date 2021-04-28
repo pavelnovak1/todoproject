@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>All items</title>
+     <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap-5.0.0-beta3-dist/css/bootstrap.min.css')}}">
 </head>
 <body>
 {% for title, deadline, importance in tasks %}
